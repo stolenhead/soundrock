@@ -6,7 +6,7 @@ var templateSource = document.getElementById("resultados-template").innerHTML;
 
 var fetchTracks = function (albumId, callback) {
     $.ajax({
-        url: "https://api.spotify.com/v1/albums/" + albumId,
+        url: "https://api.spotify.com/v1/albums/{id}",
         success: function (response) {
             callback(response);
         }
